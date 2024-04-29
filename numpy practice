@@ -1,0 +1,115 @@
+import numpy as np
+
+arr = np.array([1,2,3,4,5])
+
+print(arr)
+
+print(type(arr))
+
+
+pty= np.array([42])
+print(pty)
+
+print(pty.shape)
+
+print(np.__version__)
+
+#rr=np.array([1,23,34],[1,3.4,56]])
+  #print(arr)
+
+
+brr = np.array([[1,2,3,4],[5,6,7,8]])
+print(brr)
+
+a = np.array([1])
+b = np.array([[2,4],[1,2]])
+
+print(b.ndim)
+# number of dimension
+
+import numpy as np
+
+arr = np.array([1, 2, 3, 4], ndmin=9)
+
+print(arr)
+print('number of dimensions :', arr.ndim)
+
+arr= np.array([1,2,3,4])
+print(arr[3] + arr[2])
+
+print(arr.ndim)
+
+brr = np.array(['bolu','yut','boluuuu','david','kenneth','steph','life'])
+
+print(brr.dtype)
+
+
+
+
+
+
+# print('2nd Bolu is:', brr[0,2]) particular number in a dimension
+
+#print(brr[0:3]) slicing the array the result will be bolu yut boluuu
+# print(brr[1:]) print the current number till the end for example 1 = yut , it will print yut till end
+#print(brr[-4]) counting from backwords but starting from -1
+
+#print(brr[:2]) all the number before 2 will be printed, 2 will not be printed
+
+# print(brr[-3:-1]) print from behind does not include the first number but include the ending number
+# print(brr[1:5:2])  the first nmuber is the beginning the muddle number is the end and the ending number is the steps
+# [start:end:steps]
+# print(brr[::2]) this start from the beginning of the array and skips the number by 2 till the end.
+#crr = np.array([1,2,3,4],[5,6,7,8])
+#print(brr[0,0:4]) the first row
+#print(crr[0,0:2])
+
+#strings - used to represent text data, the text is given under quote marks. e.g. "ABCD"
+#integer - used to represent integer numbers. e.g. -1, -2, -3
+#float - used to represent real numbers. e.g. 1.2, 42.42
+#boolean - used to represent True or False.
+#complex - used to represent complex numbers. e.g. 1.0 + 2.0j, 1.5 + 2.5j
+#i - integer
+#b - boolean
+#u - unsigned integer
+#f - float
+#c - complex float
+#m - timedelta
+#M - datetime
+#O - object
+#S - string
+#U - unicode string
+#V - fixed chunk of memory for other type ( void )
+arr = np.array([1,2,3,4] ,dtype= 'i8')
+
+print (arr)
+print(arr.dtype)
+
+brr = np.array([1,2,3,4])
+
+newbrr = brr.astype(int)
+
+print(newbrr)
+
+
+# copy owns the data and does not affect the original array
+# view does not own the dats and it affects the original array
+
+err =np.array([1,2,3,4,5])
+x =err.copy()
+err[0] = 47
+print(x)
+print(err)
+
+err =np.array([1,2,3,4,5])
+x =err.view()
+err[0] = 47
+print(x)
+print(err)
+
+
+frr = np.array([1,3,4,5,6])
+x = frr.view()
+frr[3] =43
+print(x)
+print(frr)
